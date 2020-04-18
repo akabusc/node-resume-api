@@ -1,5 +1,6 @@
 
 # Directories
+.aws-sam/
 node_modules/
 dist/
 

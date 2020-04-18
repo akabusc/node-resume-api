@@ -13,7 +13,7 @@ Resources:
   GetResumeNodeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: resume-node-api/
+      CodeUri: ./
       Handler: app.getResume
       Runtime: nodejs12.x
       Events:
@@ -26,7 +26,7 @@ Resources:
   PutResumeNodeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: resume-node-api/
+      CodeUri: ./
       Handler: app.putResume
       Runtime: nodejs12.x
       Events:
