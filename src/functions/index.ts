@@ -1,2 +1,2 @@
-exports.getResume = require('./getResume');
-exports.putResume = require('./putResume');
+exports.getResume = require('./getResume.ts');
+exports.putResume = require('./putResume.ts');
