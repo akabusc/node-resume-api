@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "NodeJS Resume function",
   "main": "app.js",
-  "author": "SAM CLI",
+  "author": "Jon Carson",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0"
+    "@types/aws-lambda": "^8.10.50",
+    "@types/node": "^13.13.0",
+    "axios": "^0.18.0",
+    "typescript": "^3.8.3"
   },
   "scripts": {
-    "test": "mocha tests/unit/"
+    "test": "mocha tests/unit/",
+    "preinstall": "rm -rf dist && tsc"
   },
   "devDependencies": {
     "chai": "^4.2.0",

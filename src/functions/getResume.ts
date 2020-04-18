@@ -1,6 +1,6 @@
 let response;
 
-module.exports = async (event, context) => {
+module.exports = async (event: any, context: any) => {
     try {
         response = {
             'statusCode': 200,
