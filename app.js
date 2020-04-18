@@ -1,4 +1,5 @@
 
-const { getResume } = require('./dist/functions');
+const { getResume, putResume } = require('./dist/functions');
 
-exports.lambdaHandler = getResume;
+exports.getResume = getResume;
+exports.putResume = putResume;
