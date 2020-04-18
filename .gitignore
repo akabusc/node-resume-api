@@ -1,0 +1,9 @@
+
+# Sam Build Directory
+.aws-sam/*
+
+# Dependency directories
+node_modules/
+
+### OSX ###
+*.DS_Store
