@@ -1,0 +1,1 @@
+exports.getResume = require('./getResume');
