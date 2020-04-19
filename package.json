@@ -39,21 +39,5 @@
     "src/**/*",
     "app.js",
     "tsconfig.json"
-  ],
-  "lint-staged": {
-    "./src/*.{ts,js}": [
-      "npm run lint:fix",
-      "npm run prettier:write"
-    ]
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run prettier:write",
-      "pre-push": "npm run test"
-    }
-  }
+  ]
 }
