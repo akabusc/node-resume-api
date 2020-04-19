@@ -29,6 +29,6 @@ describe('Tests index', () => {
     const response = JSON.parse(result.body);
 
     expect(response).to.be.an('object');
-    expect(response.message).to.be.equal('successfully putz resume');
+    expect(response.message).to.be.equal('successfully put resume');
   });
 });
