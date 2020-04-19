@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "commonjs": true,
-    "es6": true
+    "es6": true,
+    "mocha": true
   },
   "extends": ["prettier", "airbnb-base"],
   "globals": {
@@ -18,5 +19,10 @@
     "prettier/prettier": "error",
     "no-console": "off",
     "no-plusplus": 1
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }

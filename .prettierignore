@@ -1,0 +1,8 @@
+
+# Directories
+.aws-sam/
+node_modules/
+dist/
+
+# Individual Files
+*.DS_Store
