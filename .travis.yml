@@ -9,6 +9,6 @@ cache:
     - 'node_modules'
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then pyenv global 3.7.1 && pip install -U pip && pip install awscli; fi
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install; fi
 after_success:
   - npm run aws:upload
