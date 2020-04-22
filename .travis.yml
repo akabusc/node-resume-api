@@ -13,4 +13,4 @@ before_install:
   - pip install -U pip
   - pip install awscli
 after_success:
-  - npm run aws:package
+  - npm run aws:upload
