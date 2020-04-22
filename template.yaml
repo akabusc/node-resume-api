@@ -4,7 +4,7 @@ Description: >
   resume-function
 
   Sample SAM Template for resume-function
- 
+
 Globals:
   Function:
     Timeout: 3
@@ -38,11 +38,11 @@ Resources:
 
 Outputs:
   NodeResumeApi:
-    Description: "API Gateway endpoint URL for Prod stage for Nodejs Resume function"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+    Description: 'API Gateway endpoint URL for Prod stage for Nodejs Resume function'
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/'
   NodeResumeFunction:
-    Description: "Node Resume Lambda Function ARN"
+    Description: 'Node Resume Lambda Function ARN'
     Value: !GetAtt NodeResumeFunction.Arn
   NodeResumeFunctionIamRole:
-    Description: "Implicit IAM Role created for Node Resume function"
+    Description: 'Implicit IAM Role created for Node Resume function'
     Value: !GetAtt NodeResumeFunctionRole.Arn
