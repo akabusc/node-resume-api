@@ -8,3 +8,9 @@ node_js:
 cache:
   directories:
     - 'node_modules'
+before_install:
+  - pyenv global 3.7.1
+  - pip install -U pip
+  - pip install awscli
+after_success:
+  - npm run aws:package
