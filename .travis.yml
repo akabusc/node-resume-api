@@ -1,7 +1,6 @@
 os:
   - linux
   - osx
-  - windows
 language: node_js
 node_js:
   - '12'
@@ -9,8 +8,7 @@ cache:
   directories:
     - 'node_modules'
 before_install:
-  - pyenv global 3.7.1
-  - pip install -U pip
-  - pip install awscli
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; pyenv global 3.7.1 && pip install -U pip && pip install awscli; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install; fi
 after_success:
   - npm run aws:upload
