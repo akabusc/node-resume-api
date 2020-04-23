@@ -13,8 +13,6 @@ cache:
 before_install:
   - nvm install 12.16.2
   - nvm use 12.16.2
-  - python -V
-  - python3 -V
   - pip install -U pip
   - pip install awscli
   - mkdir ~/.aws
