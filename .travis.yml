@@ -1,10 +1,20 @@
 os:
-  - linux
   - osx
-  - windows
-language: node_js
-node_js:
-  - '12'
+language: generic
+install:
+  - npm ci
+script:
+  - npm test
 cache:
   directories:
     - 'node_modules'
+    - $HOME/.cache/pip
+before_install:
+  - pip3 install -U pip
+  - pip3 install awscli
+  - mkdir ~/.aws
+  - echo "[default]" >> ~/.aws/config
+  - echo "aws_access_key_id=$AWS_ACCESS_KEY_ID" >> ~/.aws/config
+  - echo "aws_secret_access_key=$AWS_SECRET_ACCESS_KEY" >> ~/.aws/config
+after_success:
+  - npm run aws:upload
