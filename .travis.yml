@@ -8,7 +8,6 @@ script:
 cache:
   directories:
     - 'node_modules'
-    - $HOME/.cache/python
     - $HOME/.cache/pip
 before_install:
   - nvm install 12.16.2
