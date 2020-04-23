@@ -1,12 +1,15 @@
 os:
   - osx
-language: node_js
-node_js:
-  - '12'
+language: generic
+install:
+  - npm ci
+script:
+  - npm test
 cache:
   directories:
     - 'node_modules'
 before_install:
+  - nvm use 12.16.2
   - pyenv global 3.7.1
   - pip install -U pip
   - pip install awscli
