@@ -1,15 +1,17 @@
 os:
   - osx
 language: generic
-dist: xenial
-addons:
-  snaps:
-    - name: aws-cli
 install:
   - npm ci
 script:
   - npm test
+cache:
+  directories:
+    - 'node_modules'
+    - $HOME/.cache/pip
 before_install:
+  - pip install -U pip
+  - pip install awscli
   - mkdir ~/.aws
   - echo "[default]" >> ~/.aws/config
   - echo "aws_access_key_id=$AWS_ACCESS_KEY_ID" >> ~/.aws/config
