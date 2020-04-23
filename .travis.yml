@@ -8,7 +8,7 @@ script:
 cache:
   directories:
     - 'node_modules'
-    - $HOME/.cache/pip3
+    - $HOME/.cache/pip
 before_install:
   - pip3 install -U pip
   - pip3 install awscli
