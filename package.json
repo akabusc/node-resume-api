@@ -9,9 +9,9 @@
     "axios": "^0.18.0"
   },
   "scripts": {
-    "aws:build": "sam build -t build-template.yaml",
-    "aws:package": "sam package --s3-bucket resume-packages --output-template-file deploy-template.yaml --template-file package-template.yaml",
-    "aws:deploy": "sam deploy --template-file deploy-template.yaml --stack-name carson-resume-api --capabilities CAPABILITY_IAM",
+    "aws:build": "npm pack && sam build -t template.yaml",
+    "aws:package": "sam package --s3-bucket resume-packages --output-template-file deploy-template.yaml --template-file template.yaml",
+    "aws:deploy": "sam deploy --template-file deploy-template.yaml --stack-name carson-resume-api --capabilities CAPABILITY_IAM --region us-east-2",
     "aws:process": "npm pack && npm run aws:package && npm run aws:deploy",
     "lint": "eslint --no-error-on-unmatched-pattern ./src/**/*.{ts,js}",
     "lint:fix": "eslint --no-error-on-unmatched-pattern --fix ./src/**/*.{ts,js}",
