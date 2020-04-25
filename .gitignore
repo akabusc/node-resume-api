@@ -4,6 +4,7 @@
 node_modules/
 dist/
 .nyc_output/
+.package/
 
 # Individual Files
 *.DS_Store
