@@ -1,1 +1,0 @@
-tarball_name=$(basename -- *.tgz .tgz); tar xzf *.tgz && zip "$tarball_name.zip" $(tar tf *.tgz)
