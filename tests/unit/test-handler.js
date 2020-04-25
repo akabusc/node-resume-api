@@ -16,7 +16,7 @@ describe('Tests index', () => {
     const response = JSON.parse(result.body);
 
     expect(response).to.be.an('object');
-    expect(response.message).to.be.equal('successfully get resume');
+    expect(response.message).to.be.equal('successfully got resume');
   });
 
   it('putResume - verifies successful response', async () => {

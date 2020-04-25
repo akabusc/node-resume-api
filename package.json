@@ -9,11 +9,12 @@
     "axios": "^0.18.0"
   },
   "scripts": {
-    "aws:upload": "npm pack && aws s3 cp *.tgz s3://resume-packages",
+    "aws:upload": "npm pack && aws s3 cp *.zip s3://resume-packages",
     "aws:build": "sam build",
     "lint": "eslint --no-error-on-unmatched-pattern ./src/**/*.{ts,js}",
     "lint:fix": "eslint --no-error-on-unmatched-pattern --fix ./src/**/*.{ts,js}",
     "prepack": "npm ci && npm run ts:compile",
+    "postpack": "sh scripts/repackage-tar.sh",
     "prettier:base": "prettier './**/*.{ts,js}'",
     "prettier:check": "npm run prettier:base -- --check",
     "prettier:write": "npm run prettier:base -- --write",

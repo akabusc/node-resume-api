@@ -4,7 +4,7 @@ module.exports = async (event: any, context: any) => {
     response = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'successfully get resume',
+        message: 'successfully got resume',
         event,
         context,
       }),
