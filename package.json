@@ -14,7 +14,7 @@
     "lint": "eslint --no-error-on-unmatched-pattern ./src/**/*.{ts,js}",
     "lint:fix": "eslint --no-error-on-unmatched-pattern --fix ./src/**/*.{ts,js}",
     "prepack": "npm ci && npm run ts:compile",
-    "postpack": "tarball_name=$(basename -- *.tgz .tgz); tar xzf *.tgz && zip \"$tarball_name.zip\" $(tar tf *.tgz); rm \"$tarball_name.tgz\"; rm -rd package",
+    "postpack": "sh scripts/repackage-tar.sh",
     "prettier:base": "prettier './**/*.{ts,js}'",
     "prettier:check": "npm run prettier:base -- --check",
     "prettier:write": "npm run prettier:base -- --write",
