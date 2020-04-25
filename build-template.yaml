@@ -17,7 +17,7 @@ Resources:
   GetResumeNodeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./node-resume-function-1.0.0.zip
+      CodeUri: ./
       Handler: app.getResume
       Events:
         NodeResume:
@@ -29,7 +29,7 @@ Resources:
   PutResumeNodeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./node-resume-function-1.0.0.zip
+      CodeUri: ./
       Handler: app.putResume
       Events:
         NodeResume:

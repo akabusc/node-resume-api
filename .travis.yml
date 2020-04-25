@@ -12,6 +12,7 @@ cache:
 before_install:
   - pip3 install -U pip
   - pip3 install awscli
+  - pip3 install aws-sam-cli
   - mkdir ~/.aws
   - echo "[default]" >> ~/.aws/config
   - echo "aws_access_key_id=$AWS_ACCESS_KEY_ID" >> ~/.aws/config

@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  resume-function
+
+  Sample SAM Template for resume-function
+
+Globals:
+  Function:
+    Runtime: nodejs12.x
+    Timeout: 3
+    AutoPublishAlias: live
+    DeploymentPreference:
+      Type: Linear10PercentEvery2Minutes
+
+Resources:
+  GetResumeNodeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./.aws-sam/build/GetResumeNodeFunction
+      Handler: app.getResume
+      Events:
+        NodeResume:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
+
+  PutResumeNodeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./.aws-sam/build/PutResumeNodeFunction
+      Handler: app.putResume
+      Events:
+        NodeResume:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: put
