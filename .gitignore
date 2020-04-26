@@ -10,3 +10,4 @@ package/
 *.DS_Store
 *.tgz
 *.zip
+deploy-template.yaml

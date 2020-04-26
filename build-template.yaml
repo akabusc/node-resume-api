@@ -7,7 +7,11 @@ Description: >
 
 Globals:
   Function:
+    Runtime: nodejs12.x
     Timeout: 3
+    AutoPublishAlias: live
+    DeploymentPreference:
+      Type: Linear10PercentEvery2Minutes
 
 Resources:
   GetResumeNodeFunction:
@@ -15,12 +19,11 @@ Resources:
     Properties:
       CodeUri: ./
       Handler: app.getResume
-      Runtime: nodejs12.x
       Events:
         NodeResume:
           Type: Api
           Properties:
-            Path: /getResume
+            Path: /hello
             Method: get
 
   PutResumeNodeFunction:
@@ -28,10 +31,9 @@ Resources:
     Properties:
       CodeUri: ./
       Handler: app.putResume
-      Runtime: nodejs12.x
       Events:
         NodeResume:
           Type: Api
           Properties:
             Path: /hello
-            Method: get
+            Method: put
