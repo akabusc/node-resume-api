@@ -6,7 +6,7 @@
   "author": "Jon Carson",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.21.1"
   },
   "scripts": {
     "aws:build": "sam build -t build-template.yaml",
